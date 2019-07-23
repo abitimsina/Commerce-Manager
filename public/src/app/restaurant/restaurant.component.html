@@ -1,0 +1,60 @@
+<div>
+  <h3>Product Details</h3>
+
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Qty</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>{{restaurants.name}}</td>
+    <td>{{restaurants.qty}}</td>
+    <td>${{restaurants.price}}</td>
+
+    <button type="button" [routerLink]="['/products']">BACK</button>
+    <td><button type="button" (click)="deleteRestaurant(restaurants._id)">DELETE</button></td>
+
+  </tr>
+  </table>
+</div>
+
+
+<!-- <div> -->
+    <!-- <tr *ngFor="let restaurant of restaurants; let i=index"> -->
+        <!-- <td>{{restaurant.name}}</td> -->
+        <!-- <td>{{restaurant.cuisine}}</td> -->
+        <!-- <td>{{restaurant.price}}</td> -->
+        <!-- <td><button type="button" [routerLink]="['/products/'+restaurant._id]">Read reviews</button></td> -->
+        <!-- <td><button type="button" (click)="deleteRestaurant(restaurant._id, i)">Delete</button></td> -->
+      <!-- </tr> -->
+<!-- </div> -->
+
+
+
+
+
+
+
+
+<!-- <div>
+  <table>
+    <tr *ngIf="restaurants">
+      <td>{{restaurants.name}}</td>
+    </tr>
+  </table>
+</div> -->
+
+
+<!-- <div>
+    <h3> Product Details</h3>
+
+    <p>Name: <input type="text" [(ngModel)]="restaurants.name"></p>
+    <p>Qty: <input type="number" [(ngModel)]="restaurants.cuisine"></p>
+    <p>Price: <input type="number" [(ngModel)]="restaurants.price"></p>
+    <button type="button" [routerLink]="['/restaurants']">RESET</button> -->
+    <!-- <button type="submit" (click)="editUpdateRestaurant(restaurant)">UPDATE</button> -->
+  <!-- </div> -->
+
+
+<router-outlet></router-outlet>

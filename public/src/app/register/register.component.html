@@ -1,0 +1,13 @@
+<div>
+<h3>New Product</h3>
+    <p>Name: <input type="text" [(ngModel)]='restaurant.name'></p>
+    <div *ngIf='name'>Product must contain a name.</div>
+    <p>Qty: <input type="number" [(ngModel)]='restaurant.qty'></p>
+    <div *ngIf='qty'>Product must contain Qty.</div>
+    <p>Price: <input type="number" [(ngModel)]='restaurant.price'></p>
+    <div *ngIf='price'>Product must contain Price.</div>
+    <button type="button" [routerLink]="['/products']">Reset</button>
+    <button type="submit" (click)="onSubmit()">Create</button>
+<!-- {{restaurant | json}} -->
+
+</div>

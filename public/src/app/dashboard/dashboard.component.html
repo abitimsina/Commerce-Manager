@@ -1,0 +1,23 @@
+<div>
+  <h3>Product List</h3>
+    <button type="button" [routerLink]="['/products/new']">Add New Product</button>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants; let i=index">
+      <td>{{restaurant._id}}</td>
+      <td>{{restaurant.name}}</td>
+      <td>{{restaurant.qty}}</td>
+      <td>${{restaurant.price}}</td>
+      <td><button type="button" [routerLink]="['/products/'+restaurant._id+'/edit']">Edit</button></td>
+      <td><button type="button" [routerLink]="['/products/'+restaurant._id]">Details</button></td>
+      <!-- <td><button type="button" (click)="deleteRestaurant(restaurant._id, i)">Delete</button></td> -->
+    </tr>
+  </table>
+</div>
+
